@@ -5,9 +5,10 @@ import './index.css'
 function App() {
   const [selectedlang, setselectedlang] = useState(0)
 
-  function onElementoCliccato(chi) {
-    console.log("cliccato", chi);
-    setselectedlang(chi)
+  function onElementoCliccato(indice) {
+    console.log("cliccato indice", indice);
+    setselectedlang(indice)
+    console.log("Descrizione:", languages[chi].descrizione);
 
   }
 
@@ -16,7 +17,7 @@ function App() {
     <h1>Linguaggi</h1>
 
     {languages.map((language, indice) =>
-      <button onClick={() => { onElementoCliccato(indice) }}>{language.title}</button>
+      <button key={indice} onClick={() => { onElementoCliccato(indice) }}>{language.title} {language.descrezione}</button>
     )}
 
     <div>
