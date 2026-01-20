@@ -11,7 +11,7 @@ function App() {
 
   }
 
-  return <div className="mega-wrappr">
+  return <div className="mega">
 
     <h1>Linguaggi</h1>
 
@@ -20,10 +20,8 @@ function App() {
     )}
 
     <div>
-      <h2>{languages[0].title}</h2>
-      <p>{languages[0].descrizione}</p>
-
-
+      <h2>{languages[selectedlang].title}</h2>
+      <p>{languages[selectedlang].descrizione}</p>
     </div>
 
 
