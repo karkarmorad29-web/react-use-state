@@ -8,7 +8,7 @@ function App() {
   function onElementoCliccato(indice) {
     console.log("cliccato indice", indice);
     setselectedlang(indice)
-    console.log("Descrizione:", languages[chi].descrizione);
+    console.log("Descrizione:", languages[indice].description);
 
   }
 
@@ -16,13 +16,13 @@ function App() {
 
     <h1>Linguaggi</h1>
 
-    {languages.map((language, indice) =>
-      <button key={indice} onClick={() => { onElementoCliccato(indice) }}>{language.title} {language.descrezione}</button>
+    {languages.map((language, indice,) =>
+      <button key={indice} onClick={() => { onElementoCliccato(indice) }}>{language.title}</button>
     )}
 
     <div>
       <h2>{languages[selectedlang].title}</h2>
-      <p>{languages[selectedlang].descrizione}</p>
+      <p>{languages[selectedlang].description}</p>
     </div>
 
 
