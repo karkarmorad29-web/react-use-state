@@ -12,24 +12,34 @@ function App() {
 
   }
 
-  return <div className="mega">
-
+  return <div className="container">
     <h1>Linguaggi</h1>
 
-    {languages.map((language, indice,) =>
-      <button key={indice} onClick={() => { onElementoCliccato(indice) }}>{language.title}</button>
-    )}
 
-    <div>
-      <h2>{languages[selectedlang].title}</h2>
-      <p>{languages[selectedlang].description}</p>
+
+    <div className="buttons-container">
+      {languages.map((language, indice,) =>
+        <button className="lang-button active" key={indice} onClick={() => { onElementoCliccato(indice) }}>{language.title}</button>
+      )}
     </div>
 
 
 
+
+    <div className="content-card">
+      <h2>{languages[selectedlang].title}</h2>
+      <p>{languages[selectedlang].description}</p>
+    </div>
   </div>
-
-
 }
+
+
+
+
+
+
+
+
+
 
 export default App
